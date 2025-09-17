@@ -8,12 +8,7 @@
 
 'use strict'
 
-// Fall back to base64-js in every other environment (Node, browser tests, etc.).
-const isReactNative =
-  typeof navigator === 'object' &&
-  navigator != null &&
-  navigator.product === 'ReactNative'
-const base64 = isReactNative ? require('react-native-quick-base64') : require('base64-js')
+const base64 = require('base64-js')
 const ieee754 = require('ieee754')
 const customInspectSymbol =
   (typeof Symbol === 'function' && typeof Symbol['for'] === 'function') // eslint-disable-line dot-notation
